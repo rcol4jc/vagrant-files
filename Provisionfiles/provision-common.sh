@@ -11,12 +11,12 @@ sudo apt-get update -y
 
 echo "******************************"
 echo "* Install my favorite tools: *"
-echo "*  nano, git, others as      *"
-echo "*        needed              *"
+echo "*  nano, git, htop, and      *"
+echo "*   others as needed         *"
 echo "******************************"
 echo " "
 
-sudo apt-get install nano git -y
+sudo apt-get install nano git htop -y
 
 
 

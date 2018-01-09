@@ -13,10 +13,20 @@ sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password passwor
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password vagrant'
 sudo apt-get -y install mysql-server
 
-echo "******************************************************"
-echo "* run mysql_secure_installation with echo'd answers  *"
-echo "******************************************************"
-echo " "
+
+echo "*****************************************************"
+echo "* mysql_secure_installation wtih predefined answers *"
+echo "*****************************************************"
+
+#answers.txt has the answers as follows: 
+# vagrant (password for root)
+# n (to change password)
+# Y
+# Y
+# Y
+# Y
+
+ 
 cat /vagrant/answers.txt | mysql_secure_installation
 
 

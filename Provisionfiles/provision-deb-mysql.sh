@@ -17,7 +17,7 @@ echo "******************************************************"
 echo "* run mysql_secure_installation with echo'd answers  *"
 echo "******************************************************"
 echo " "
-echo -e "vagrant\nn\Y\nY\nY\nY\n" | mysql_secure_installation 2>/dev/null
+cat /vagrant/answers.txt | mysql_secure_installation
 
 
 
